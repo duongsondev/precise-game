@@ -41,7 +41,20 @@ class _HomePageState extends State<HomePage>
             child: AnimatedOpacity(
                 duration: Duration(seconds: 2),
                 opacity: animation.value,
-                child: Text("Hello ❤ Flutter!")),
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50.0),
+                      gradient: SweepGradient(
+                          colors: [Colors.cyan, Colors.cyan, Colors.white])),
+                  child: IconButton(
+                      iconSize: 45.0,
+                      icon: Icon(CupertinoIcons.play),
+                      onPressed: () {
+                        print("Play");
+                      }),
+                )),
           ),
         ],
       ),
